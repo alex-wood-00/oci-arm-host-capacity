@@ -44,6 +44,8 @@ jobs:
       - name: Run test suite
         run: |
           vendor/bin/phpunit --color tests/
+      - name: Run provisioning script
+        run: php ./index.php
         env:
           OCI_REGION: ${{ secrets.OCI_REGION }}
           OCI_USER_ID: ${{ secrets.OCI_USER_ID }}
